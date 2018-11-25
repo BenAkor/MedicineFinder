@@ -38,6 +38,7 @@ CREATE TABLE dbo.Customer
     CustomerMiddleName [NVARCHAR](50),
     CustomerLastName [NVARCHAR](50) NOT NULL,
     CustomerPhoneNumber [NVARCHAR] (15),
+    CustomerEmailAddress [NVARCHAR] (100),
     CustomerAddress [NVARCHAR](300)
     -- specify more columns here
 );
@@ -69,7 +70,8 @@ CREATE TABLE dbo.Patient
     PatientFirstName [NVARCHAR](50) NOT NULL,
     PatientMiddleName [NVARCHAR](50),
     PatientLastName [NVARCHAR](50) NOT NULL,
-    HospitalName [NVARCHAR] FOREIGN KEY REFERENCES dbo.Hospital (HospitalName)
+    PatientPhoneNumber [NVARCHAR](15),
+    HospitalId [INT] FOREIGN KEY REFERENCES dbo.Hospital (HospitalId)
     -- specify more columns here
 );
 GO
@@ -86,7 +88,7 @@ CREATE TABLE dbo.Doctor
     DoctorMiddleName [NVARCHAR](50),
     DoctorLastName [NVARCHAR](50),
     DoctorPhoneNumber [NVARCHAR](50),
-    HospitalName [NVARCHAR] FOREIGN KEY REFERENCES dbo.Hospital (HospitalName)
+    HospitalId [INT] FOREIGN KEY REFERENCES dbo.Hospital (HospitalId)
     -- specify more columns here
 );
 GO
