@@ -1,2 +1,5 @@
 # MedicineFinder | Finding Prescription Medicine in Pharmacies
 Database for entering and finding prescription medicine and knowing which pharmacy has the medication for sale. This database will help patients to easily find their medicine they need to purchase and which pharmacy has the medicine on hand. The Pharmacies will be the ones updating the database with the medicines they have available and their prices.
+Registered Doctors will also have access to the database and be able to direct patients to the right Pharmacy to find their medicine. Pharmacist would sell the medicines should be registered in the database and they should check the Doctor's entries before selling the medicine to the patient or customers.
+
+Security will be an important aspect of this project since it involves patient information.
