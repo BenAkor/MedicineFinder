@@ -92,3 +92,21 @@ CREATE TABLE dbo.Doctor
     -- specify more columns here
 );
 GO
+
+-- Create a new table called 'Nurse' in schema 'dbo'
+-- Drop the table if it already exists
+IF OBJECT_ID('dbo.Nurse', 'U') IS NOT NULL
+DROP TABLE dbo.Nurse
+GO
+-- Create the table in the specified schema
+CREATE TABLE dbo.Nurse
+(
+    NurseId INT NOT NULL PRIMARY KEY, -- primary key column
+    NurseFirstName [NVARCHAR](50) NOT NULL,
+    NurseMiddleName [NVARCHAR](50),
+    NurseLastName [NVARCHAR](50),
+    NursePhoneNumber [NVARCHAR](50),
+    HospitalId [INT] FOREIGN KEY REFERENCES dbo.Hospital (HospitalId)
+    -- specify more columns here
+);
+GO
